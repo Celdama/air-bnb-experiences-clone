@@ -2,15 +2,9 @@ import React from 'react';
 import starIcon from './icon/star.svg';
 import './Card.css';
 
-const Card = ({
-  img,
-  rating,
-  reviewCount,
-  location,
-  title,
-  price,
-  openSpots,
-}) => {
+const Card = ({ item }) => {
+  const { coverImg, location, title, stats, price, openSpots } = item;
+
   let badgeText;
   if (openSpots === 0) {
     badgeText = 'Sold Out';
@@ -23,14 +17,14 @@ const Card = ({
 
       <img
         className='card--image'
-        src={`/static/media/${img}`}
+        src={`/static/media/${coverImg}`}
         alt='activity-img'
       />
       <div className='card--info'>
         <div className='card--stats'>
           <img className='card--info--star' src={starIcon} alt='' />
           <span className='gray'>
-            {rating} ({reviewCount}) •
+            {stats.rating} ({stats.reviewCount}) •
           </span>
           <span className='gray'>{location}</span>
         </div>
