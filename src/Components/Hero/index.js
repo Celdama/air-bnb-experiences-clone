@@ -1,11 +1,17 @@
 import React from 'react';
 import './Hero.css';
+import GroupImg from './group.png';
 
 const Hero = () => {
   return (
-    <div>
-      <p>Hero</p>
-    </div>
+    <section className='hero'>
+      <img className='hero--photo' src={GroupImg} alt='experiences-img' />
+      <h1 className='hero--header'>Online Experiences</h1>
+      <p className='hero--text'>
+        Join unique interactive activities led by one-of-a-kind hosts-all
+        without leaving home
+      </p>
+    </section>
   );
 };
 
