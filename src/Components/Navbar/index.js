@@ -4,8 +4,8 @@ import './Navbar.css';
 
 const Navbar = () => {
   return (
-    <nav className='nav-bar'>
-      <img src={AirBnbLogo} alt='airbnb-logo' />
+    <nav>
+      <img className='nav--logo' src={AirBnbLogo} alt='airbnb-logo' />
     </nav>
   );
 };
