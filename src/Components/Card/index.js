@@ -1,21 +1,26 @@
 import React from 'react';
-import swimmingImg from './img/swimming.png';
 import starIcon from './icon/star.svg';
 import './Card.css';
 
-const Card = () => {
+const Card = ({ img, rating, reviewCount, location, title, price }) => {
   return (
     <div className='card'>
-      <img className='card--image' src={swimmingImg} alt='swimming-img' />
+      <img
+        className='card--image'
+        src={`/static/media/${img}`}
+        alt='swimming-img'
+      />
       <div className='card--info'>
         <div className='card--stats'>
           <img className='card--info--star' src={starIcon} alt='' />
-          <span className='gray'>5.0 (6) - </span>
-          <span className='gray'>USA</span>
+          <span className='gray'>
+            {rating} ({reviewCount}) •
+          </span>
+          <span className='gray'>{location}</span>
         </div>
-        <p>Life lessons with Katie Zaferes</p>
+        <p>{title}</p>
         <p>
-          <span className='bold'>From $136</span> / person
+          <span className='bold'>From ${price}</span> / person
         </p>
       </div>
     </div>

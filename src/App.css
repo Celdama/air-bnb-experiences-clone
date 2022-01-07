@@ -14,3 +14,7 @@ body {
 .bold {
   font-weight: bold;
 }
+
+.cards {
+  display: flex;
+}
