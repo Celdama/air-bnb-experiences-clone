@@ -4,6 +4,7 @@ import './Card.css';
 
 const Card = ({ item }) => {
   const { coverImg, location, title, stats, price, openSpots } = item;
+  console.log(coverImg);
 
   let badgeText;
   if (openSpots === 0) {
@@ -15,11 +16,7 @@ const Card = ({ item }) => {
     <div className='card'>
       {badgeText && <div className='card--badge'>{badgeText}</div>}
 
-      <img
-        className='card--image'
-        src={`/static/media/${coverImg}`}
-        alt='activity-img'
-      />
+      <img className='card--image' src={coverImg} alt='activity-img' />
       <div className='card--info'>
         <div className='card--stats'>
           <img className='card--info--star' src={starIcon} alt='' />
