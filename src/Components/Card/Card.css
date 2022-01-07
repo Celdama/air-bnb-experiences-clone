@@ -1,7 +1,9 @@
 .card {
   width: 176px;
   font-size: 12px;
-  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
 }
 
 .card > img {
@@ -9,8 +11,17 @@
   height: 235px;
 }
 
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card--price {
+  margin-top: auto;
+}
+
 .card--info > p {
-  margin: 2px 0;
+  margin: 6px 0;
 }
 
 .card--stats {

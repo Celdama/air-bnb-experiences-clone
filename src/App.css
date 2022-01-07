@@ -15,6 +15,9 @@ body {
   font-weight: bold;
 }
 
-.cards {
+.cards-list {
   display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
 }

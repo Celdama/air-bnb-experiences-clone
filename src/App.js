@@ -5,16 +5,18 @@ import Card from './Components/Card';
 import data from './data';
 
 function App() {
-  const cardElements = data.map((card) => {
+  const cards = data.map((card) => {
+    const { id, coverImg, location, title, price } = card;
+    const { rating, reviewCount } = card.stats;
     return (
       <Card
-        img={card.coverImg}
-        key={card.id}
-        rating={card.stats.rating}
-        reviewCount={card.stats.reviewCount}
-        location={card.location}
-        title={card.title}
-        price={card.price}
+        key={id}
+        img={coverImg}
+        rating={rating}
+        reviewCount={reviewCount}
+        location={location}
+        title={title}
+        price={price}
       />
     );
   });
@@ -23,7 +25,7 @@ function App() {
     <div className='App'>
       <Navbar />
       <Hero />
-      <section>{cardElements}</section>
+      <section className='cards-list'>{cards}</section>
     </div>
   );
 }

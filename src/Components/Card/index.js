@@ -8,7 +8,7 @@ const Card = ({ img, rating, reviewCount, location, title, price }) => {
       <img
         className='card--image'
         src={`/static/media/${img}`}
-        alt='swimming-img'
+        alt='activity-img'
       />
       <div className='card--info'>
         <div className='card--stats'>
@@ -18,8 +18,8 @@ const Card = ({ img, rating, reviewCount, location, title, price }) => {
           </span>
           <span className='gray'>{location}</span>
         </div>
-        <p>{title}</p>
-        <p>
+        <p className='card--title'>{title}</p>
+        <p className='card--price'>
           <span className='bold'>From ${price}</span> / person
         </p>
       </div>
