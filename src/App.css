@@ -6,3 +6,11 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
 }
+
+.gray {
+  color: #918e9b;
+}
+
+.bold {
+  font-weight: bold;
+}

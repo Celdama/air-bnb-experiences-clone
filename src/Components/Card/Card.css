@@ -1,0 +1,22 @@
+.card {
+  width: 176px;
+  font-size: 12px;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.card--info > p {
+  margin: 2px 0;
+}
+
+.card--stats {
+  display: flex;
+  align-items: center;
+}
+
+.card--info--star {
+  margin-right: 2px;
+  height: 14px;
+}
