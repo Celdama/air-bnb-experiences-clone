@@ -6,7 +6,7 @@ import data from './data';
 
 function App() {
   const cards = data.map((card) => {
-    const { id, coverImg, location, title, price } = card;
+    const { id, coverImg, location, title, price, openSpots } = card;
     const { rating, reviewCount } = card.stats;
     return (
       <Card
@@ -17,6 +17,7 @@ function App() {
         location={location}
         title={title}
         price={price}
+        openSpots={openSpots}
       />
     );
   });
