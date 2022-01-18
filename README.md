@@ -1,4 +1,5 @@
-# What we'll learn
+# AirBnB Experiences clone
 
-- Props
-- Creating components from an array
+Creating an AirBnB experiences clone
+
+![preview](src/img/preview.png)
